@@ -15,6 +15,7 @@ body {
   body {
     text-align: justify;
     text-justify: inter-word;
+    word-break: break-word;
   }
   
   h1 {
