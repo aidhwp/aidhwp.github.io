@@ -8,15 +8,21 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   text-align: justify;
+  word-break: break-word;
 }
 
 @media (max-width: 600px) {
+  body {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
   h1 {
-    font-size: 0.6rem;
+    font-size: 0.4rem;
   }
 
   h2 {
-    font-size: 0.3rem;
+    font-size: 0.2rem;
   }
 }
 
