@@ -33,6 +33,9 @@ body {
   .slider-track img {
   width: 100vx;
   }
+  .chair img {
+    max-width: 50px;
+  }
 }
 
 .highlight-red {
@@ -141,7 +144,7 @@ footer {
 
 .chair img {
   width: 100%;
-  max-width: 10rem;
+  max-width: 100px;
   height: auto;
   border-radius: 50%;
   object-fit: cover;
