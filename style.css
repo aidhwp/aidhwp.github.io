@@ -140,7 +140,8 @@ footer {
 }
 
 .chair img {
-  width: 95%;
+  width: 100%;
+  max-width: 10rem;
   height: auto;
   border-radius: 50%;
   object-fit: cover;
