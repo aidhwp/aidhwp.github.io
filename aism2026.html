@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-SM-PPHM 2026</title>
+    <style>
+        /* CSS Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #1a365d;
+        }
+        a {
+            text-decoration: none;
+            color: #2b6cb0;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #cbd5e0;
+        }
+        nav {
+            background-color: #2a4365;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav a {
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #63b3ed;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #ebf8ff;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            color: #4a5568;
+            font-size: 1.1rem;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3182ce;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #2b6cb0;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 1rem;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        /* oganizer Grid */
+        .oganizer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .oganizer-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .oganizer-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a202c;
+            color: #a0aec0;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>International Workshop on AI + Frontiers in Social Medicine: Public Policy and Health Management (AI-SM-PPHM 2026)</h1>
+        <p>Jul. 8-10, 2026 - Waseda Univeristy, Tokyo, Japan</p>
+        <p>in conjunction with <strong>International Conference on Artificial Intelligence for Health and Education <a href="https://icaihe.org/">(ICAIHE 2026)</a></strong></p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#topics">Topics</a></li>
+            <li><a href="#dates">Important Dates</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+    <div class="hero">
+        <h2>About this Workshop</h2>
+        <p style="text-align: justify; color: #4a5568;">
+            This Workshop focuses on the frontier integration of Artificial Intelligence (AI) and Social Medicine within Public Policy and Health Management, aiming to move AI from an “algorithm-performance” orientation toward an evidence-based, governance-ready, and implementation-feasible paradigm. With the rapid convergence of multi-source data infrastructures—such as electronic health records (EHRs), insurance claims and payment data, public health surveillance systems, wearables, and school/campus health data—AI is increasingly positioned to support risk identification, resource allocation, continuity of care, and performance management. However, its real-world value hinges on whether it can be made explainable (Explainable AI, XAI), equity-sensitive (fairness), compliant with privacy and data governance requirements, accountable, and operationally implementable within complex service systems.
+        </p>            
+        <p style="text-align: justify; color: #4a5568;">
+            The Workshop emphasizes two complementary problem domains spanning population health and health system management. First, it addresses school population health and campus health governance, including early warning for student mental health risks, infectious disease preparedness, health promotion, and digital health literacy. Second, it targets lifecycle-oriented governance for older adults and children. We welcome contributions leveraging causal inference, quasi-experimental designs, multimodal data fusion, and policy simulation/decision modeling to generate reproducible, transferable policy instruments and management strategies.
+        </p>
+        <a href="https://cmt3.research.microsoft.com/ICAIHE2026" class="btn">Submission Site</a>
+    </div>
+    </section>
+
+    <main class="container">
+        
+        <section id="topics">
+            <h2 class="section-title">Topics of interest include, but are not limited to:</h2>
+            <ul>
+                <li>Big data analytics for population health and health policy</li>
+                <li>Causal discovery/inference for policy evaluation and program impact</li>
+                <li>Multimodal data fusion (EHR, claims, public health surveillance, SDOH)</li>
+                <li>AI for health service planning, resource allocation, and performance management</li>
+                <li>Explainable AI (XAI) for policy makers and health administrators</li>
+                <li>Fairness/bias mitigation and equity-aware decision systems</li>
+                <li>Federated learning, privacy-preserving analytics, and data governance</li>
+                <li>Ethics, security, and accountability of AI in public systems</li>
+                <li>AI agents / Generative AI for health management workflows</li>
+                <li>Social media analytics for health behaviors, risk communication, and misinformation governance</li>
+                <li>AI for school population health and campus health management</li>
+                <li>Equity-aware AI interventions for children and adolescents</li>
+                <li>AI-enabled care coordination for older adults</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Paper Submission & Publication</h2>
+            <p>
+                Prospective authors are invited to submit original papers reporting on research results, experimentations or novel applications related to the workshop topics.
+
+                Submitted papers must be in pdf format, and according to the Springer LNCS Authors Guidelines: <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines"><strong>Information for Authors</strong></a>.
+            </p>
+            <br>
+            <p>
+                Formats for the submissions are either
+            </p>
+            <br>
+            <ul>
+                <li><strong>Full Paper (12-15 pages) (Recommended)</strong></li>
+                <li><strong>Short Paper (6-11 pages)</strong></li>
+            </ul>
+            <br>
+            <p>
+                including main content and references. Extra pages will pay an additional cost.
+
+                All submitted papers will be peer-reviewed by two or three experts in the field based on originality, relevance, clarity, and technical quality. The review process will follow a single-blind format, and accepted papers will be selected based on reviewers’ feedback and overall contribution to the workshop themes.
+
+                Paper submission system is available at: <a href="https://cmt3.research.microsoft.com/ICAIHE2026"><strong>Submission Site</strong></a>. Authors should submit through the main conference system and select the specific track name: “Workshop-AI-SM-PPHM 2026".
+
+                All accepted papers, presented at the workshop by a registered author, will be published in the <strong>Springer CCIS series</strong> alongside the main conference proceedings.
+            </p>
+        </section>
+
+        <section id="dates">
+            <h2 class="section-title">Important Dates</h2>
+            <p>All deadlines are in the Anywhere on Earth timezone.</p>
+            <br>
+            <ul>
+                <li><strong>Workshop Paper Submission Due: Mar. 28, 2026 (Extended)</strong></li>
+                <li>Notification to authors: May. 1, 2026</li>
+                <li>Paper Registration Due: May 10, 2026</li>
+                <li>Camera-ready Submission Due: May. 15, 2026</li>
+            </ul>
+        </section>
+
+        <section id="organizers">
+            <h2 class="section-title">Organizers</h2>
+            <div class="oganizer-grid">
+                <div class="oganizer-card">                    
+                    <h3>Atsushi Ogihara</h3>                  
+                    <p style="font-size: 0.9rem; color: #718096;">Waseda Univeristy, Japan</p>
+                </div>
+                <div class="oganizer-card">                    
+                    <h3>Siyu Zhou</h3>           
+                    <p style="font-size: 0.9rem; color: #718096;">Hangzhou Normal University, China</p>
+                </div>
+                <div class="oganizer-card">                    
+                    <h3>Yinghan Xu</h3>                   
+                    <p style="font-size: 0.9rem; color: #718096;">Waseda Univeristy, Japan</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <p>Contact us: Dr. Siyu Zhou (siyuzhou@hznu.edu.cn)</p>
+
+    </main>
+
+    <footer id="contact">
+        <p>&copy; AI-SM-PPHM 2026 Organization. All rights reserved.</p>
+        
+    </footer>
+
+</body>
+</html>
