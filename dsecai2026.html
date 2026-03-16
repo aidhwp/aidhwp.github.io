@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS-ECAI 2026</title>
+    <style>
+        /* CSS Variables for consistent theming */
+        :root {
+            --bg-dark: #0f172a;
+            --bg-surface: #1e293b;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #10b981; /* Emerald Green */
+            --accent-hover: #059669;
+        }
+
+        /* Base & Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        a {
+            text-decoration: none;
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .logo span {
+            color: var(--accent-color);
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 5%;
+            background: linear-gradient(135deg, rgba(15,23,42,1) 0%, rgba(30,41,59,0.8) 100%);
+            border-bottom: 1px solid #334155;
+        }
+        .hero-date {
+            color: var(--accent-color);
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 3rem;
+        }
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 6rem 5%;
+            border-bottom: 1px solid #334155;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin-top: 10px;
+        }
+
+        /* Call for Papers (Two Column Info) */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        .info-block h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        .info-block p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Minimalist Speakers List */
+        .organizer-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .organizer-item {
+            background-color: var(--bg-surface);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid transparent;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        .organizer-item:hover {
+            border-left-color: var(--accent-color);
+            transform: translateX(10px);
+        }
+        .organizer-item h4 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        .organizer-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 5%;
+            text-align: center;
+            color: var(--text-muted);
+        }
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* In a real scenario, add a hamburger menu here */
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">DS-ECAI 2026<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#submission">Submissions & Publication</a></li>
+            <li><a href="#dates">Important Dates</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-date">Jul. 8-10, 2026 - Waseda Univeristy, Tokyo, Japan</div>
+        <h2>2026 International Workshop on Digitalization and Socialization of Elderly Care in the Age of Artificial Intelligence (DS-ECAI 2026)</h2>
+        <p>in conjunction with 2026 International Conference on Artificial Intelligence for Health and Education <a href="https://icaihe.org/">(ICAIHE 2026)</a></p>
+        <div>
+            <a href="https://cmt3.research.microsoft.com/ICAIHE2026" class="btn-primary">Submit via CMT</a>
+        </div>
+    </section>
+
+    <section id="overview" class="section">
+        <div class="section-header">
+            <h2 class="section-title">Aim and Scope</h2>
+        </div>
+        <div class="info-grid">
+            <div class="info-block">
+                <p>Japan, China, and Korea are experiencing a shared challenge characterized by rapid population aging. As the demand for care increases, the innovation of healthcare systems has become a significant regional concern in East Asia.</p>
+                
+                <p>In the age of artificial intelligence, there are two dimensions can be considered for the elderly care development: digitalization as a technical condition and socialization as a consideration for humanity. Digitalization focuses on building efficient technical infrastructure to support care, while socialization emphasizes the human-centric coordination required to innovate it.</p>
+                
+                <p>This workshop provides a platform specifically for young researchers from Japan, China, and Korea to exchange ideas, foster collaboration, and explore interdisciplinary approaches. Our goal is to develop sustainable, high-quality elderly care that balance technological progress with the core values of human care.</p>
+                
+
+            </div>
+            <div class="info-block">
+                <h3>Topics of interest include, but are not limited to:</h3>
+                <ul style="color: var(--text-muted);">
+                    <li style="margin-bottom: 0.5rem;"><strong style="color: var(--text-light);">AI Innovation in Aging Societies</strong></li>
+                    <li style="margin-bottom: 0.5rem;"><strong style="color: var(--text-light);">Applications of AI-based Care Technologies</strong></li>
+                    <li style="margin-bottom: 0.5rem;"><strong style="color: var(--text-light);">AI-based Age-friendly Environments and Design</strong></li>
+                    <li style="margin-bottom: 0.5rem;"><strong style="color: var(--text-light);">Human-centric Coordination in AI-enabled Care</strong></li>
+                    <li style="margin-bottom: 0.5rem;"><strong style="color: var(--text-light);">Intelligent Systems for Personalized Care and Well-being</strong></li>
+                    <li style="margin-bottom: 0.5rem;"><strong style="color: var(--text-light);">AI-driven Infrastructure for Elderly Care</strong></li>
+                    <li style="margin-bottom: 0.5rem;"><strong style="color: var(--text-light);">Perspectives on Elderly Care Systems in East Asia</strong></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="submission" class="section">
+        <div class="section-header">
+            <h2 class="section-title">Paper Submissions & Publication</h2>
+        </div>
+        <p>Paper submission system is available at<a href="https://cmt3.research.microsoft.com/ICAIHE2026">Microsoft CMT System</a>. Authors should submit through the main conference system and select the specific track name: <strong>“Workshop-DS-ECAI 2026"</strong>. Prospective authors are invited to submit original papers reporting on research results, experimentations or novel applications related to the workshop topics. Submitted papers must be in pdf format, and according to the Springer LNCS Authors Guidelines: <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines">Information for Authors</a>. Formats for the submissions are either</p>
+        <br>
+        <ul>
+            <li>Full Paper (12-15 pages) (Recommended)</li>
+            <li>Short Paper (6-11 pages)</li>
+        </ul>
+        <br>
+        <p>including main content and references. Extra pages will pay an additional cost. Submissions will be peer-reviewed by at least three competent reviewers; eligible papers will be accepted either as Full or Short Paper.</p>
+
+        <p>All accepted papers, presented at the workshop by a registered author, will be published in the <strong>Springer CCIS series</strong> alongside the main conference proceedings.</p>
+    </section>
+
+    <section id="dates" class="section">
+        <div class="section-header">
+            <h2 class="section-title">Important Dates</h2>
+        </div>
+        <p>All deadlines are in the Anywhere on Earth timezone.</p>
+        <ul style="color: var(--text-muted);">
+            <li><strong style="color: var(--text-light);">Workshop Paper Submission Due:</strong> Mar. 28, 2026 (Extended)</li>
+            <li><strong style="color: var(--text-light);">Author Notification:</strong> May. 1, 2026</li>
+            <li><strong style="color: var(--text-light);">Paper Registration Due:</strong> May 10, 2026</li>
+            <li><strong style="color: var(--text-light);">Camera-ready Submission Due:</strong> May 15, 2026</li>
+        </ul>
+    </section>
+
+
+
+
+    <section id="organizers" class="section">
+        <div class="section-header">
+            <h2 class="section-title">Organizers</h2>
+        </div>
+        
+        <div class="organizer-list">
+            <div class="organizer-item">
+                <h4>Fangrong He</h4>
+                <p>Korea University, South Korea</p>
+                
+            </div>
+            <div class="organizer-item">
+                <h4>Ruichen Cong</h4>
+                <p>Waseda University, Japan</p>
+                
+            </div>
+            <div class="organizer-item">
+                <h4>Yinghan Xu</h4>
+                <p>Waseda University, Japan</p>
+                
+            </div>
+
+            <div class="organizer-item">
+                <h4>Kazuhiro Uchida</h4>
+                <p>Mukogawa Women's University, Japan</p>
+                
+            </div>
+
+            <div class="organizer-item">
+                <h4>Keishi Ebisawa</h4>
+                <p>Akita University of Nursing and Welfare, Japan</p>
+                
+            </div>
+
+            <div class="organizer-item">
+                <h4>Liyun Zhou</h4>
+                <p>Waseda University, Japan</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; DS-ECAI 2026. All rights reserved.</p>
+        <p>CONTACT US: aidhwp1@gmail.com</p>
+    </footer>
+
+</body>
+</html>
